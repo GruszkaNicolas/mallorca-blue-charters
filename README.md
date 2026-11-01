@@ -47,3 +47,32 @@ El sistema resuelve dos grandes problemáticas del negocio:
 * **Historias de Usuario (Backlog):** Carga y seguimiento de tareas en GitHub Projects (Kanban).
 * **Tablero de Indicadores de Control (KPIs):** Definición de métricas para evaluar la ocupación, tasa de averías y tiempo de respuesta.
 
+---
+
+## 🗺️ Diagrama BPMN (Entrega 4)
+Proceso *Reserva, ejecución y mantenimiento de flota* con Pools (Cliente, Pasarela de pago, Mallorca Blue Charters), Lanes (Sistema, Atención al Cliente, Patrones y Tripulación, Jefatura de Mantenimiento) y 4 compuertas XOR para excepciones.
+
+![BPMN](docs/bpmn-reserva-mantenimiento.png)
+
+📄 Versión vectorial: [`docs/bpmn-reserva-mantenimiento.pdf`](docs/bpmn-reserva-mantenimiento.pdf)
+
+---
+
+## 📋 Backlog ágil (GitHub Projects)
+| Issue | Historia de usuario | Estado |
+|-------|---------------------|--------|
+| [#1 HU-01](../../issues/1) | Como cliente turístico quiero consultar disponibilidad de embarcaciones en tiempo real, para planificar y asegurar mi reserva de chárter. | Done |
+| [#2 HU-02](../../issues/2) | Como Jefe de Mantenimiento quiero alertas automáticas basadas en horas de navegación del motor, para programar revisiones y evitar fallas imprevistas en la flota. | In Progress |
+| [#3 HU-03](../../issues/3) | Como Director Comercial quiero ver un reporte mensual de ocupación de la flota y facturación, para evaluar el rendimiento comercial de la temporada. | To Do |
+
+---
+
+## 📊 Indicadores de control (KPIs)
+Resumen: tiempo de respuesta < 1,5 s (≥ 95 %), overbooking 0 %, bloqueo post-devolución < 30 s, canal directo ≥ 35 % a 6 meses, reducción de comisiones ≥ 20 %, ocupación de flota y tasa de averías (línea base temporada 1). Detalle completo y ajustes al diccionario de datos en [`docs/KPIs.md`](docs/KPIs.md).
+
+---
+
+## 🔀 Flujo de trabajo Git
+* `main`: rama estable. Cada cambio se desarrolla en una rama `feature/...` y se integra mediante Pull Request con revisión de pares.
+* Commits con formato `tipo: descripción` (`docs:`, `feat:`, `fix:`), un cambio lógico por commit.
+
